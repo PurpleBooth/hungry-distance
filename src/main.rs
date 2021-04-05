@@ -7,29 +7,29 @@ fn main() -> Result<(), Box<dyn Error>> {
     let coordinate1 = Coordinate(
         match matches.value_of("x1") {
             Some(value) => value.parse()?,
-            _ => return Err("missing x1".into()),
+            None => return Err("missing x1".into()),
         },
         match matches.value_of("y1") {
             Some(value) => value.parse()?,
-            _ => return Err("missing y1".into()),
+            None => return Err("missing y1".into()),
         },
         match matches.value_of("z1") {
             Some(value) => value.parse()?,
-            _ => return Err("missing z1".into()),
+            None => return Err("missing z1".into()),
         },
     );
     let coordinate2 = Coordinate(
         match matches.value_of("x2") {
             Some(value) => value.parse()?,
-            _ => return Err("missing x2".into()),
+            None => return Err("missing x2".into()),
         },
         match matches.value_of("y2") {
             Some(value) => value.parse()?,
-            _ => return Err("missing y2".into()),
+            None => return Err("missing y2".into()),
         },
         match matches.value_of("z2") {
             Some(value) => value.parse()?,
-            _ => return Err("missing z2".into()),
+            None => return Err("missing z2".into()),
         },
     );
     println!("{}", distance(&coordinate1, &coordinate2,));
