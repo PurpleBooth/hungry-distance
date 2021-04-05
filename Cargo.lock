@@ -81,7 +81,7 @@ dependencies = [
 
 [[package]]
 name = "hungry-distance"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "clap",
 ]
