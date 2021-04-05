@@ -4,7 +4,7 @@ Calculate the distance between two points in an XYZ space.
 
 ## Usage
 
-```shell
+``` shell
 hungry-distance 0.1.0
 Billie Thompson <billie@billiecodes.com>
 Calculate the distance between two points in an XYZ space
@@ -29,10 +29,10 @@ FLAGS:
 
 You can install this with brew
 
-```shell
-brew install PurpleBooth/repo/git-mit
+``` shell
+brew install PurpleBooth/repo/hungry-distance
 ```
 
-You can also download the latest
-release and run
-it.
+You can also download the [latest
+release](https://github.com/PurpleBooth/hungry-distance/releases/latest)
+and run it.
