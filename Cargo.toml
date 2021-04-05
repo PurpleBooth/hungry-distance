@@ -5,6 +5,9 @@ authors = ["Billie Thompson <billie@billiecodes.com>"]
 edition = "2018"
 description = "Calculate the distance between two points in an XYZ space"
 license = "Creative Commons Zero v1.0 Universal"
+repository = "git@github.com:PurpleBooth/hungry-distance.git"
+keywords = ["cli", "distance"]
+categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
