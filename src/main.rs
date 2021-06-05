@@ -49,8 +49,7 @@ mod tests {
 
     #[test]
     fn coordinate_distance() {
-        assert_eq!(
-            true,
+        assert!(
             (distance(
                 &Coordinate(-11.46875, 39.78125, 22.78125,),
                 &Coordinate(73.875, -3.5625, -52.625,)
