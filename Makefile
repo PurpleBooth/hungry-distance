@@ -13,11 +13,6 @@ show-help:
 test:
 	UST_BACKTRACE=1 cargo test
 
-.PHONY: specdown
-## Test the markdown in the docs directory
-specdown: build
-	./bin/specdown ./docs/**.md ./docs/**/*.md ./README.md
-
 .PHONY: bench
 ## Benchmark
 bench:
