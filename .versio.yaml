@@ -9,9 +9,11 @@ projects:
     version:
       file: Cargo.toml
       toml: package.version
+    also:
+      - file: README.md
+        pattern: whatismyip (\d+\.\d+\.\d+)
     hooks:
       post_write: cargo fetch
-
 sizes:
   use_angular: true
   none: [ci, "-"]
