@@ -3,11 +3,10 @@ queue_rules:
     speculative_checks: 20
     batch_size: 20
     conditions:
-      - check-success~=^lints
-      - check-success~=^version
-      - check-success~=^test
-      - check-success~=^security-audit
-      - check-success~=^check
+      - check-success~=^commit-checks /
+      - check-success~=^specdown /
+      - check-success~=^lint-markdown /
+      - check-success~=^rust-checks /
 
 pull_request_rules:
   - name: request review on external contributor
@@ -21,11 +20,10 @@ pull_request_rules:
   - name: automatic rebase for dependencies
     conditions:
     conditions:
-      - check-success~=^lints
-      - check-success~=^version
-      - check-success~=^test
-      - check-success~=^security-audit
-      - check-success~=^check
+      - check-success~=^commit-checks /
+      - check-success~=^specdown /
+      - check-success~=^lint-markdown /
+      - check-success~=^rust-checks /
       - base=main
       - author~=^dependabot(|-preview)\[bot\]$
     actions:
