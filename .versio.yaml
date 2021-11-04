@@ -11,7 +11,7 @@ projects:
       toml: package.version
     also:
       - file: README.md
-        pattern: whatismyip (\d+\.\d+\.\d+)
+        pattern: hungry-distance (\d+\.\d+\.\d+)
     hooks:
       post_write: cargo fetch
 sizes:
