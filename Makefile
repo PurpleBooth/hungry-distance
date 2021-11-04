@@ -46,9 +46,9 @@ lint:
 .PHONY: fmt
 ## Format what can be formatted
 fmt:
-	cargo fix --allow-dirty
-	cargo +nightly clippy --allow-dirty --fix -Z unstable-options --all-features -- -D warnings -Dclippy::all -D clippy::pedantic
-	cargo fmt --all
+	cargo +nightly  fix --allow-dirty
+	cargo +nightly clippy --allow-dirty --fix -Z unstable-options --all-features -- -D warnings -D clippy::all -D clippy::pedantic -D clippy::nursery
+	cargo +nightly fmt --all
 	npx prettier --write **.yml
 
 .PHONY: clean

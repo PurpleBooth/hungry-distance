@@ -1,3 +1,16 @@
+//! Calculate the distance between two points in an XYZ space
+
+#![warn(
+    rust_2018_idioms,
+    unused,
+    rust_2021_compatibility,
+    nonstandard_style,
+    future_incompatible,
+    missing_copy_implementations,
+    missing_debug_implementations,
+    missing_docs
+)]
+
 use std::error::Error;
 
 mod cli;
@@ -32,7 +45,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             None => return Err("missing z2".into()),
         },
     );
-    println!("{}", distance(&coordinate1, &coordinate2,));
+    println!("{}", distance(&coordinate1, &coordinate2));
 
     Ok(())
 }
@@ -40,7 +53,12 @@ fn main() -> Result<(), Box<dyn Error>> {
 struct Coordinate(f64, f64, f64);
 
 fn distance(a: &Coordinate, b: &Coordinate) -> f64 {
-    ((b.0 - a.0).powi(2) + (b.1 - a.1).powi(2) + (b.2 - a.2).powi(2)).sqrt()
+    (b.2 - a.2)
+        .mul_add(
+            b.2 - a.2,
+            (b.1 - a.1).mul_add(b.1 - a.1, (b.0 - a.0).powi(2)),
+        )
+        .sqrt()
 }
 
 #[cfg(test)]
@@ -51,8 +69,8 @@ mod tests {
     fn coordinate_distance() {
         assert!(
             (distance(
-                &Coordinate(-11.46875, 39.78125, 22.78125,),
-                &Coordinate(73.875, -3.5625, -52.625,)
+                &Coordinate(-11.46875, 39.78125, 22.78125),
+                &Coordinate(73.875, -3.5625, -52.625),
             ) - 121.853_760_168_439_2_f64)
                 .abs()
                 < f64::EPSILON
