@@ -133,7 +133,7 @@ dependencies = [
 
 [[package]]
 name = "hungry-distance"
-version = "0.1.16"
+version = "0.1.17"
 dependencies = [
  "clap",
 ]
