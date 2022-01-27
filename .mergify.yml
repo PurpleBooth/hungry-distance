@@ -16,9 +16,6 @@ queue_rules:
   - check-success=rust-checks / bench (macos-latest)
   - check-success=rust-checks / bench (ubuntu-latest)
   - check-success=rust-checks / bench (windows-latest)
-  - check-success=specdown / specdown (macos-latest)
-  - check-success=specdown / specdown (ubuntu-latest)
-  - check-success=specdown / specdown (windows-latest)
 pull_request_rules:
 - name: request review on external contributor
   conditions:
@@ -43,9 +40,6 @@ pull_request_rules:
   - check-success=rust-checks / bench (macos-latest)
   - check-success=rust-checks / bench (ubuntu-latest)
   - check-success=rust-checks / bench (windows-latest)
-  - check-success=specdown / specdown (macos-latest)
-  - check-success=specdown / specdown (ubuntu-latest)
-  - check-success=specdown / specdown (windows-latest)
   - base=main
   - author~=^dependabot(|-preview)\[bot\]$
   actions:
