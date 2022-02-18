@@ -16,7 +16,7 @@ use std::error::Error;
 mod cli;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let matches = cli::app().get_matches();
+    let matches = cli::cli().get_matches();
     let coordinate1 = Coordinate(
         match matches.value_of("x1") {
             Some(value) => value.parse()?,
