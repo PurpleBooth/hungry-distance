@@ -5,7 +5,7 @@ Calculate the distance between two points in an XYZ space.
 ## Usage
 
 ``` shell
-hungry-distance 0.1.34
+hungry-distance 0.1.35
 Billie Thompson <billie@billiecodes.com>
 Calculate the distance between two points in an XYZ space
 
