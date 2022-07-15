@@ -1,6 +1,6 @@
 [package]
 name = "hungry-distance"
-version = "0.1.35"
+version = "0.1.36"
 authors = ["Billie Thompson <billie@billiecodes.com>"]
 edition = "2018"
 description = "Calculate the distance between two points in an XYZ space"
